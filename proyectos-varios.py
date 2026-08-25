@@ -5,4 +5,4 @@
 #      + input('Que adjetivo define su sabor o potencia?: ') + '\nFelicidades!!')
 
 #Comisiones
-print("solo de prueba")
+nombre = input('Ingrese su nombre: ')
