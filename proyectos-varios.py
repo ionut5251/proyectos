@@ -72,11 +72,81 @@
 #               "apellido":"Majoru",
 #               "peso":"90",
 #               "altura":"1.90"}
-diccionario = {"c1":55,
-               "c2":[10, 20, 30],
-               "c3":["a", "e", "i", "o"]}
+#diccionario = {"c1":55,
+#               "c2":[10, 20, 30],
+#               "c3":["a", "e", "i", "o"]}
 #resultado = diccionario["nombre"]
 #print(diccionario["c3"][1].upper())
-print(diccionario["c3"][1])
+#print(diccionario["c3"][1])
 #diccionario["5"] = "c4"
 #print(diccionario)
+
+'''mascota = "perro"
+if mascota == "gato":
+    print("tienes un gato")
+elif mascota == "perro":
+    print("tienes un perro")
+else:
+    print("no se que masscota tienes")
+
+edad = 16
+calificacion = 9
+if edad > 18:
+    print("eres un adulto")
+else:
+    print("eres menor de edad")
+    if calificacion >= 6:
+        print("aprobaste")
+    else:
+        print("has suspendido")'''
+
+'''cliente = {"nombre": "Constan",
+           "edad": 35,
+           "sexo": "Masculino",}
+pelicula = {"titulo": "Matrix",
+            "ficha_tecnica": {"protagonista": "Neo",
+                              "director": "hermanos Wachowski"}}
+libro = {"titulo": "1984",
+         "autor": "George Orwell"}
+elementos = [cliente, pelicula, libro]
+for e in elementos:
+    match e:
+        case {"nombre": nombre,
+              "edad": edad,
+              "sexo": sexo,}:
+            print("este es un cliente")
+            print(nombre, edad, sexo)
+        case {"titulo": titulo,
+              "ficha_tecnica": {"protagonista":protagonista,
+                                "director":director}}:
+            print("esta es un pelicula")
+            print(titulo, director, protagonista)
+        case _:
+            print("No se que es esto")'''
+
+'''Adivina el numero'''
+from random import randint
+intentos = 0
+estimado = 8
+numero_secreto = randint(1, 100)
+
+nombre = input("Hola, ¿cual es tu nombre? ")
+print(f"Bienvenido, {nombre}, estoy pensando en un numero entre 1 y 100")
+
+while intentos<10:
+    estimado = int(input(f"Intento {intentos + 1}: Adivina el numero: "))
+    intentos += 1
+    if estimado not in range(1, 101):
+        print("Por favor, introduce un numero entre 1 y 100")
+        continue
+    elif estimado < numero_secreto:
+        print("El numero es mayor. Intentalo de nuevo")
+    elif estimado > numero_secreto:
+        print("El numero es menor. Intentalo de nuevo")
+    else:
+        print(f"Felicidades, {nombre}! Adivinaste el numero en {intentos} intentos.")
+        break
+if estimado != numero_secreto:
+    print(f"Lo siento, {nombre}. El numero secreto era {numero_secreto}. Mejor suerte la proxima vez!")
+
+    
