@@ -147,3 +147,4 @@ print(mi_pajaro.color)
 mi_pajaro.volar(50)
 mi_pajaro.pintar_negro()
 print(mi_pajaro.color)
+
